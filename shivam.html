@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal Portfolio — Full Stack Developer" />
+  <title>Portfolio — Shivam Kumar Singh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="beauty.css" />
+</head>
+<body>
+
+  <!-- Grain/Noise Texture Overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+
+  <!-- Custom Cursor (desktop only) -->
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════ HEADER / NAV ═══════════════════════════════ -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#/" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">[</span><span class="logo-initials">Shivam</span><span class="logo-bracket">]</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#/" class="nav-link" data-route="home">Home</a></li>
+        <li><a href="#/projects" class="nav-link" data-route="projects">Projects</a></li>
+        <li><a href="#/blog" class="nav-link" data-route="blog">Blog</a></li>
+        <li><a href="#/contact" class="nav-link" data-route="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <!-- Sun icon -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════ MOBILE MENU ═══════════════════════════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <ul role="list">
+      <li style="--i:1"><a href="#/" class="mobile-link" data-route="home">Home</a></li>
+      <li style="--i:2"><a href="#/projects" class="mobile-link" data-route="projects">Projects</a></li>
+      <li style="--i:3"><a href="#/blog" class="mobile-link" data-route="blog">Blog</a></li>
+      <li style="--i:4"><a href="#/contact" class="mobile-link" data-route="contact">Contact</a></li>
+    </ul>
+    <div class="mobile-socials">
+      <a href="https://github.com/shivamkumarsingh28" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://linkedin.com/in/shivamsaeeam/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="mailto:shiva850681@gmail.com">Email ↗</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ MAIN APP ═══════════════════════════════ -->
+  <main class="app" id="app" role="main">
+    <!-- Pages are rendered here by JavaScript -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-ring"></div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        © <span id="footerYear"></span> Shivam Kumar Singh
+        <span class="footer-sep">·</span>
+        Built with vanilla JS &amp; ☕
+      </p>
+      <div class="footer-socials">
+        <a href="https://github.com/shivamkumarsingh28" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://linkedin.com/in/shivamsaeeam/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <!-- <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a> -->
+      <a href="mailto:shiva850681@gmail.com">Email ↗</a>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+  <!-- GSAP Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- GSAP ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Portfolio App -->
+  <script src="brain.js"></script>
+
+</body>
+</html>
